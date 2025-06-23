@@ -9,12 +9,12 @@ const Header = () => {
   return (
     <header className="bg-white/95 backdrop-blur-sm fixed w-full top-0 z-50 shadow-sm border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 lg:py-4">
           <div className="flex-1">
-            <h1 className="text-2xl lg:text-3xl font-bold text-gray-800">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">
               Dra. Lúcia Fernandes
             </h1>
-            <p className="text-sm lg:text-base text-gray-600 font-medium">
+            <p className="text-xs sm:text-sm lg:text-base text-gray-600 font-medium">
               Psicóloga Clínica
             </p>
           </div>
@@ -32,9 +32,10 @@ const Header = () => {
 
           <button
             onClick={scrollToContact}
-            className="bg-gradient-to-r from-blue-400 to-teal-400 text-white px-6 py-3 rounded-full font-semibold hover:from-blue-500 hover:to-teal-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ml-4"
+            className="bg-gradient-to-r from-blue-400 to-teal-400 text-white px-3 py-2 sm:px-4 sm:py-2 lg:px-6 lg:py-3 rounded-full font-semibold text-sm lg:text-base hover:from-blue-500 hover:to-teal-500 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl ml-2 lg:ml-4"
           >
-            Agendar Consulta
+            <span className="hidden sm:inline">Agendar Consulta</span>
+            <span className="sm:hidden">Agendar</span>
           </button>
         </div>
       </div>

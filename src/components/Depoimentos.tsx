@@ -30,56 +30,57 @@ const depoimentos = [
 
 const Depoimentos = () => {
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-teal-50/30">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-teal-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
             Quem já experimentou a transformação
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             O que meus pacientes dizem sobre sua jornada de cura
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {depoimentos.map((depoimento, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8 relative"
+              className="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-6 sm:p-8 relative"
             >
-              <Quote className="absolute top-6 right-6 text-teal-200" size={32} />
+              <Quote className="absolute top-4 right-4 sm:top-6 sm:right-6 text-teal-200" size={28} />
               
-              <div className="flex items-center space-x-4 mb-6">
+              <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
                 <img
                   src={depoimento.avatar}
                   alt={depoimento.nome}
-                  className="w-16 h-16 rounded-full object-cover border-4 border-teal-100"
+                  className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover border-4 border-teal-100"
                 />
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800">
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-800">
                     {depoimento.nome}
                   </h4>
                   <div className="flex space-x-1">
                     {[...Array(depoimento.rating)].map((_, i) => (
-                      <Star key={i} className="text-yellow-400 fill-current" size={16} />
+                      <Star key={i} className="text-yellow-400 fill-current" size={14} />
                     ))}
                   </div>
                 </div>
               </div>
               
-              <p className="text-gray-600 leading-relaxed text-lg italic">
+              <p className="text-gray-600 leading-relaxed text-base sm:text-lg italic">
                 "{depoimento.texto}"
               </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
+        <div className="text-center mt-12 sm:mt-16">
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            className="bg-gradient-to-r from-teal-500 to-green-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:from-teal-600 hover:to-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="bg-gradient-to-r from-teal-500 to-green-500 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-xl hover:from-teal-600 hover:to-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
-            Agende Sua Transformação Agora
+            <span className="hidden sm:inline">Agende Sua Transformação Agora</span>
+            <span className="sm:hidden">Agendar Transformação</span>
           </button>
         </div>
       </div>

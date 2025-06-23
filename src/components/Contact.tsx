@@ -24,89 +24,89 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-teal-50/30 to-white">
+    <section id="contact" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-teal-50/30 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
             Vamos Começar Sua Jornada?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Entre em contato e dê o primeiro passo para uma vida mais equilibrada
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Informações de Contato */}
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-800 mb-6">
+          <div className="space-y-6 sm:space-y-8">
+            <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
                 Informações de Contato
               </h3>
               
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center">
-                    <Phone className="text-white" size={20} />
+              <div className="space-y-4 sm:space-y-6">
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center">
+                    <Phone className="text-white" size={18} />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800">Telefone</p>
-                    <p className="text-gray-600">(11) 99999-9999</p>
+                    <p className="font-semibold text-gray-800 text-sm sm:text-base">Telefone</p>
+                    <p className="text-gray-600 text-sm sm:text-base">(11) 99999-9999</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-green-500 rounded-full flex items-center justify-center">
-                    <Mail className="text-white" size={20} />
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-teal-500 to-green-500 rounded-full flex items-center justify-center">
+                    <Mail className="text-white" size={18} />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800">E-mail</p>
-                    <p className="text-gray-600">contato@luciafernandes.com</p>
+                    <p className="font-semibold text-gray-800 text-sm sm:text-base">E-mail</p>
+                    <p className="text-gray-600 text-sm sm:text-base">contato@luciafernandes.com</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-purple-500 rounded-full flex items-center justify-center">
-                    <MapPin className="text-white" size={20} />
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-500 to-purple-500 rounded-full flex items-center justify-center">
+                    <MapPin className="text-white" size={18} />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800">Localização</p>
-                    <p className="text-gray-600">Atendimento Online e Presencial<br />São Paulo - SP</p>
+                    <p className="font-semibold text-gray-800 text-sm sm:text-base">Localização</p>
+                    <p className="text-gray-600 text-sm sm:text-base">Atendimento Online e Presencial<br />São Paulo - SP</p>
                   </div>
                 </div>
                 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                    <Clock className="text-white" size={20} />
+                <div className="flex items-center space-x-3 sm:space-x-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+                    <Clock className="text-white" size={18} />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800">Horário de Atendimento</p>
-                    <p className="text-gray-600">Segunda a Sexta: 8h às 18h<br />Sábado: 8h às 12h</p>
+                    <p className="font-semibold text-gray-800 text-sm sm:text-base">Horário de Atendimento</p>
+                    <p className="text-gray-600 text-sm sm:text-base">Segunda a Sexta: 8h às 18h<br />Sábado: 8h às 12h</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-blue-500 to-teal-500 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">
+            <div className="bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl sm:rounded-2xl p-6 sm:p-8 text-white">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
                 Primeira Consulta Gratuita
               </h3>
-              <p className="text-lg mb-6 opacity-90">
+              <p className="text-base sm:text-lg mb-4 sm:mb-6 opacity-90">
                 Conheça meu trabalho sem compromisso. Agende uma conversa inicial 
                 de 30 minutos totalmente gratuita.
               </p>
-              <button className="bg-white text-teal-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+              <button className="bg-white text-teal-600 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base hover:bg-gray-100 transition-colors duration-300">
                 Agendar Consulta Gratuita
               </button>
             </div>
           </div>
 
           {/* Formulário de Contato */}
-          <div className="bg-white rounded-2xl shadow-lg p-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
               Envie uma Mensagem
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Nome Completo
@@ -167,9 +167,9 @@ const Contact = () => {
               
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 to-teal-500 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                className="w-full bg-gradient-to-r from-blue-500 to-teal-500 text-white py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:from-blue-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
               >
-                <Send size={20} />
+                <Send size={18} />
                 <span>Enviar Mensagem</span>
               </button>
             </form>
@@ -177,22 +177,22 @@ const Contact = () => {
         </div>
 
         {/* Redes Sociais */}
-        <div className="text-center mt-16">
-          <h3 className="text-xl font-semibold text-gray-800 mb-6">
+        <div className="text-center mt-12 sm:mt-16">
+          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-4 sm:mb-6">
             Conecte-se comigo nas redes sociais
           </h3>
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-4 sm:space-x-6">
             <a
               href="#"
-              className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
             >
-              <Instagram size={24} />
+              <Instagram size={20} />
             </a>
             <a
               href="#"
-              className="w-14 h-14 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
+              className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform duration-300"
             >
-              <MessageCircle size={24} />
+              <MessageCircle size={20} />
             </a>
           </div>
         </div>

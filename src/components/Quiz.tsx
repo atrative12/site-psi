@@ -97,26 +97,26 @@ const Quiz = () => {
   const progress = ((currentQuestion + 1) / questions.length) * 100;
 
   return (
-    <section id="quiz" className="py-20 bg-gradient-to-b from-white to-blue-50/30">
+    <section id="quiz" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-blue-50/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
             Como está a sua Mente Hoje?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Descubra e Dê o Primeiro Passo para o Bem-Estar
           </p>
-          <p className="text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-500 mt-4 max-w-2xl mx-auto">
             Responda a estas perguntas rápidas para refletir sobre seus sentimentos 
             e entender melhor suas necessidades.
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
+        <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-8 lg:p-12">
           {!showResult ? (
             <>
               {/* Progress Bar */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <div className="flex justify-between items-center mb-2">
                   <span className="text-sm font-medium text-gray-600">
                     Pergunta {currentQuestion + 1} de {questions.length}
@@ -134,25 +134,25 @@ const Quiz = () => {
               </div>
 
               {/* Current Question */}
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-8 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 sm:mb-8 leading-relaxed">
                     {questions[currentQuestion].question}
                   </h3>
                 </div>
                 
-                <div className="space-y-4 max-w-2xl mx-auto">
+                <div className="space-y-3 sm:space-y-4 max-w-2xl mx-auto">
                   {questions[currentQuestion].options.map((option) => (
                     <button
                       key={option.value}
                       onClick={() => handleAnswerSelect(option.value)}
-                      className={`w-full p-6 rounded-2xl border-2 text-left transition-all duration-300 hover:border-teal-300 hover:bg-teal-50/50 hover:shadow-md transform hover:scale-105 ${
+                      className={`w-full p-4 sm:p-6 rounded-xl sm:rounded-2xl border-2 text-left transition-all duration-300 hover:border-teal-300 hover:bg-teal-50/50 hover:shadow-md transform hover:scale-105 ${
                         answers[questions[currentQuestion].id] === option.value
                           ? 'border-teal-500 bg-teal-50 shadow-md'
                           : 'border-gray-200 bg-white'
                       }`}
                     >
-                      <span className="text-lg text-gray-700 font-medium">
+                      <span className="text-base sm:text-lg text-gray-700 font-medium">
                         {option.text}
                       </span>
                     </button>
@@ -161,14 +161,14 @@ const Quiz = () => {
               </div>
 
               {/* Navigation */}
-              <div className="flex justify-between items-center mt-12">
+              <div className="flex justify-between items-center mt-8 sm:mt-12">
                 <button
                   onClick={goToPreviousQuestion}
                   disabled={currentQuestion === 0}
-                  className="flex items-center space-x-2 px-6 py-3 text-gray-600 hover:text-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
+                  className="flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 text-gray-600 hover:text-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300"
                 >
                   <ChevronLeft size={20} />
-                  <span>Anterior</span>
+                  <span className="hidden sm:inline">Anterior</span>
                 </button>
 
                 <button
@@ -180,18 +180,18 @@ const Quiz = () => {
               </div>
             </>
           ) : (
-            <div className="text-center space-y-8">
-              <div className="w-16 h-16 mx-auto bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center">
-                <Heart className="text-white" size={32} />
+            <div className="text-center space-y-6 sm:space-y-8">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto bg-gradient-to-r from-blue-500 to-teal-500 rounded-full flex items-center justify-center">
+                <Heart className="text-white" size={24} />
               </div>
               
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {needsSupport ? (
                   <>
-                    <h3 className="text-2xl font-bold text-gray-800">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
                       Suas respostas indicam que você merece cuidado especial
                     </h3>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                       Suas respostas indicam que você pode estar passando por momentos de desafio 
                       com sua saúde mental. É compreensível e você não está sozinho(a). Cuidar da 
                       sua mente é o primeiro passo para o bem-estar. Se você sente que a ansiedade, 
@@ -199,45 +199,49 @@ const Quiz = () => {
                       um espaço seguro e acolhedor para juntos explorarmos caminhos para uma vida 
                       mais equilibrada e feliz.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                       <button
                         onClick={openWhatsApp}
-                        className="bg-gradient-to-r from-green-500 to-green-600 text-white px-10 py-5 rounded-full font-semibold text-xl hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                        className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-xl hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                       >
-                        <MessageCircle size={24} />
-                        <span>Conversar no WhatsApp</span>
+                        <MessageCircle size={20} />
+                        <span className="hidden sm:inline">Conversar no WhatsApp</span>
+                        <span className="sm:hidden">WhatsApp</span>
                       </button>
                       <button
                         onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="bg-gradient-to-r from-blue-500 to-teal-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:from-blue-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                        className="bg-gradient-to-r from-blue-500 to-teal-500 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-xl hover:from-blue-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                       >
-                        Agendar Sessão Online
+                        <span className="hidden sm:inline">Agendar Sessão Online</span>
+                        <span className="sm:hidden">Agendar Sessão</span>
                       </button>
                     </div>
                   </>
                 ) : (
                   <>
-                    <h3 className="text-2xl font-bold text-gray-800">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-800">
                       Que bom! Você está mantendo um bom equilíbrio
                     </h3>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                       Suas respostas sugerem que você está mantendo um bom equilíbrio emocional. 
                       Lembre-se que o autocuidado é contínuo e a terapia pode ser uma ferramenta 
                       valiosa para o autoconhecimento e prevenção. Mantenha-se atento(a) ao seu bem-estar.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                       <button
                         onClick={openWhatsApp}
-                        className="bg-gradient-to-r from-green-500 to-green-600 text-white px-10 py-5 rounded-full font-semibold text-xl hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                        className="bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-xl hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                       >
-                        <MessageCircle size={24} />
-                        <span>Conversar no WhatsApp</span>
+                        <MessageCircle size={20} />
+                        <span className="hidden sm:inline">Conversar no WhatsApp</span>
+                        <span className="sm:hidden">WhatsApp</span>
                       </button>
                       <button
                         onClick={() => document.getElementById('especialidades')?.scrollIntoView({ behavior: 'smooth' })}
-                        className="bg-gradient-to-r from-teal-500 to-green-500 text-white px-10 py-5 rounded-full font-semibold text-xl hover:from-teal-600 hover:to-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                        className="bg-gradient-to-r from-teal-500 to-green-500 text-white px-6 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-lg sm:text-xl hover:from-teal-600 hover:to-green-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                       >
-                        Conhecer Mais sobre o Atendimento
+                        <span className="hidden sm:inline">Conhecer Mais sobre o Atendimento</span>
+                        <span className="sm:hidden">Conhecer Atendimento</span>
                       </button>
                     </div>
                   </>
@@ -255,10 +259,10 @@ const Quiz = () => {
         </div>
 
         {showContactForm && (
-          <div className="mt-12 bg-white rounded-2xl shadow-lg p-8">
-            <div className="text-center mb-8">
-              <MessageCircle className="w-12 h-12 text-teal-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">
+          <div className="mt-8 sm:mt-12 bg-white rounded-xl sm:rounded-2xl shadow-lg p-6 sm:p-8">
+            <div className="text-center mb-6 sm:mb-8">
+              <MessageCircle className="w-10 h-10 sm:w-12 sm:h-12 text-teal-500 mx-auto mb-4" />
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">
                 Vamos conversar?
               </h3>
               <p className="text-gray-600">
@@ -266,7 +270,7 @@ const Quiz = () => {
               </p>
             </div>
             
-            <form className="max-w-md mx-auto space-y-6">
+            <form className="max-w-md mx-auto space-y-4 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   Nome Completo
@@ -304,14 +308,14 @@ const Quiz = () => {
                 <button
                   type="button"
                   onClick={openWhatsApp}
-                  className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-4 rounded-xl font-semibold text-lg hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                  className="flex-1 bg-gradient-to-r from-green-500 to-green-600 text-white py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:from-green-600 hover:to-green-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
                 >
-                  <MessageCircle size={20} />
+                  <MessageCircle size={18} />
                   <span>WhatsApp</span>
                 </button>
                 <button
                   type="submit"
-                  className="flex-1 bg-gradient-to-r from-blue-500 to-teal-500 text-white py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="flex-1 bg-gradient-to-r from-blue-500 to-teal-500 text-white py-3 sm:py-4 rounded-xl font-semibold text-base sm:text-lg hover:from-blue-600 hover:to-teal-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Enviar Dados
                 </button>
