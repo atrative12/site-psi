@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* Background gradient with new image */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-teal-50 to-green-50" 
            style={{
-             backgroundImage: `url('https://i.imgur.com/NTq1hP4.jpeg')`,
+             backgroundImage: `url('https://imgur.com/a/NTq1hP4')`,
              backgroundSize: 'cover',
              backgroundPosition: 'center',
              backgroundRepeat: 'no-repeat',
