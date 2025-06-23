@@ -68,7 +68,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-teal-400/20 rounded-3xl transform rotate-6"></div>
               <img
-                src="https://i.imgur.com/1A9944j.jpeg"
+                src="https://imgur.com/a/agCh39N"
                 alt="Dra. Lúcia Fernandes - Psicóloga Clínica"
                 className="relative w-full h-[600px] object-cover rounded-3xl shadow-2xl"
               />
